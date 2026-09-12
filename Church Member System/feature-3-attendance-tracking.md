@@ -37,10 +37,10 @@
 
 ### US-3.4: View a member's attendance history
 **As a** signed-in staff member
-**I want to** view a single member's attendance history across services
-**So that** I can identify regular attenders and members who have stopped coming
+**I want to** view a single member's attendance history
+**So that** I can identify regular attenders and members who have stopped attending
 **Priority:** P2
-**Independent test:** Open a member's profile and see a list of services they attended
+**Independent test:** Open a member's profile and see what they have attended
 **Acceptance scenarios:** see ### US-3.4 under Acceptance Criteria
 
 ### US-3.5: Correct an attendance record
@@ -121,14 +121,14 @@
 #### Scenario: Staff marks a member present for a service
 * **Given** I am signed in
 * **And** service `Sunday Morning Service` exists
-* **And** member `Jane Doe` exists
-* **When** I mark `Jane Doe` present for `Sunday Morning Service`
-* **Then** the API returns `201` with an attendance record linking her `memberId` and the service's `serviceId`
+* **And** member `David North` exists
+* **When** I mark `David North` present for `Sunday Morning Service`
+* **Then** the API returns `201` with an attendance record linking his `memberId` and the service's `serviceId`
 
 #### Scenario: Staff attempts to mark the same member present twice for the same service
 * **Given** I am signed in
-* **And** `Jane Doe` is already marked present for `Sunday Morning Service`
-* **When** I attempt to mark her present for that same service again
+* **And** `David North` is already marked present for `Sunday Morning Service`
+* **When** I attempt to mark him present for that same service again
 * **Then** the API returns `400` with `{ "message": "Attendance already recorded for this member and service." }`
 
 ---
@@ -137,9 +137,9 @@
 
 #### Scenario: Staff views the attendance list for a specific service
 * **Given** I am signed in
-* **And** `Jane Doe` and `John Smith` are marked present for `Sunday Morning Service`
+* **And** `David North` and `John Smith` are marked present for `Sunday Morning Service`
 * **When** I open the attendance view for `Sunday Morning Service`
-* **Then** I see both `Jane Doe` and `John Smith` listed as present
+* **Then** I see both `David North` and `John Smith` listed as present
 
 ---
 
@@ -147,9 +147,9 @@
 
 #### Scenario: Staff views a member's attendance across multiple services
 * **Given** I am signed in
-* **And** `Jane Doe` is marked present for two different services
-* **When** I open `Jane Doe`'s profile
-* **Then** I see both services listed in her attendance history
+* **And** `David north` is marked present for two different services
+* **When** I open `David North`'s profile
+* **Then** I see both services listed in his attendance history
 
 ---
 
@@ -157,7 +157,7 @@
 
 #### Scenario: Staff removes an incorrectly recorded attendance entry
 * **Given** I am signed in
-* **And** `Jane Doe` was mistakenly marked present for `Sunday Morning Service`
+* **And** `David North` was mistakenly marked present for `Sunday Morning Service`
 * **When** I remove that attendance record
 * **Then** the API returns `200` confirming deletion
-* **And** `Jane Doe` no longer appears in the attendance list for that service
+* **And** `David North` no longer appears in the attendance list for that service

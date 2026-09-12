@@ -16,7 +16,7 @@
 **I want to** add a new member record with their name, contact info, address, and household
 **So that** I can maintain an accurate roster of the congregation
 **Priority:** P1
-**Independent test:** Submit a new member with a first and last name; the member appears in the roster
+**Independent test:** Submit a new member with a first and last name and the member appears in the roster
 **Acceptance scenarios:** see ### US-2.1 under Acceptance Criteria
 
 ### US-2.2: View member list
@@ -99,9 +99,9 @@
 
 #### Scenario: Staff adds a new member with required fields
 * **Given** I am signed in
-* **When** I submit a new member with first name `Jane` and last name `Doe`
+* **When** I submit a new member with first name `David` and last name `North`
 * **Then** the API returns `201` with a member object containing `id`, `firstName`, `lastName`, and `status: "active"`
-* **And** `Jane Doe` appears in the member roster
+* **And** `David North` appears in the member roster
 
 #### Scenario: Staff attempts to add a member with a missing last name
 * **Given** I am signed in
@@ -125,9 +125,9 @@
 
 #### Scenario: Staff opens a member's profile
 * **Given** I am signed in
-* **And** member `Jane Doe` exists with an address, phone, and household set
-* **When** I open `Jane Doe`'s profile
-* **Then** I see her full name, address, phone, email, household, and status
+* **And** member `David North` exists with an address, phone, and household set
+* **When** I open `David North`'s profile
+* **Then** I see his full name, address, phone, email, household, and status
 
 ---
 
@@ -135,14 +135,14 @@
 
 #### Scenario: Staff updates a member's address
 * **Given** I am signed in
-* **And** member `Jane Doe` exists
-* **When** I update her address and save
+* **And** member `David North` exists
+* **When** I update his address and save
 * **Then** the API returns `200` with the updated address
-* **And** the new address is displayed on her profile
+* **And** the new address is displayed on his profile
 
 #### Scenario: Staff attempts to save an edit with an empty first name
 * **Given** I am signed in
-* **And** member `Jane Doe` exists
+* **And** member `David North` exists
 * **When** I clear the first name field and attempt to save
 * **Then** the API returns `400` with `{ "message": "First name is required." }`
 * **And** the member's stored first name is unchanged
@@ -153,7 +153,7 @@
 
 #### Scenario: Staff marks a member inactive
 * **Given** I am signed in
-* **And** member `Jane Doe` has status `active`
-* **When** I mark her as inactive
+* **And** member `David North` has status `active`
+* **When** I mark him as inactive
 * **Then** the API returns `200` with `status: "inactive"`
-* **And** `Jane Doe`'s record and any past attendance history still exist
+* **And** `David North`'s record and any past attendance history still exist

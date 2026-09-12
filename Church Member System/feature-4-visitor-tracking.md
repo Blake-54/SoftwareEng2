@@ -99,9 +99,9 @@
 
 #### Scenario: Staff logs a new visitor with required fields
 * **Given** I am signed in
-* **When** I submit a new visitor with first name `Sam`, last name `Lee`, and visit date `2026-09-13`
+* **When** I submit a new visitor with first name `David`, last name `North`, and visit date `2026-09-13`
 * **Then** the API returns `201` with a visitor object containing `id`, `firstName`, `lastName`, and a linked visit date
-* **And** `Sam Lee` appears in the visitor list
+* **And** `David North` appears in the visitor list
 
 #### Scenario: Staff attempts to log a visitor without a visit date
 * **Given** I am signed in
@@ -125,11 +125,11 @@
 
 #### Scenario: Staff logs a second visit for an existing visitor
 * **Given** I am signed in
-* **And** visitor `Sam Lee` already has one recorded visit
-* **When** I log a new visit date for `Sam Lee`
-* **Then** the API returns `201` with a new visit date linked to the existing `Sam Lee` visitor record
-* **And** `Sam Lee` now shows two visit dates
-* **And** no duplicate `Sam Lee` visitor record is created
+* **And** visitor `David North` already has one recorded visit
+* **When** I log a new visit date for `David North`
+* **Then** the API returns `201` with a new visit date linked to the existing `David North` visitor record
+* **And** `David North` now shows two visit dates
+* **And** no duplicate `David North` visitor record is created
 
 ---
 
@@ -137,7 +137,7 @@
 
 #### Scenario: Staff converts a returning visitor into a member
 * **Given** I am signed in
-* **And** visitor `Sam Lee` exists with a phone number and email on file
-* **When** I convert `Sam Lee` to a member
-* **Then** the API returns `201` with a new member record for `Sam Lee` pre-filled with his phone and email
-* **And** the visitor record for `Sam Lee` is linked to the new member record
+* **And** visitor `David North` exists with a phone number and email on file
+* **When** I convert `David North` to a member
+* **Then** the API returns `201` with a new member record for `David North` pre-filled with his phone and email
+* **And** the visitor record for `David North` is linked to the new member record

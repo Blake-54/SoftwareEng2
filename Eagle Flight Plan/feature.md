@@ -9,7 +9,7 @@ Department heads, career-center staff, and employers are **out of scope**. The s
 
 ### How a professor gets “their” students
 
-1. When a student **enters the school**, they are given a **major** and **one faculty advisor** (a professor for that major).
+1. When a student **enters the school**, they choose a a **major** and **one faculty advisor** (a professor for that major).
 2. That **advisor** is the only faculty user who sees that student’s progress and pushes tasks onto their checklist.
 3. If a major has several professors, each student still has **one** advisor; professors do not share the whole major roster.
 4. Other professors cannot see students they do not advise. The system does not assign or reassign advisors through a department-head workflow.
@@ -40,19 +40,21 @@ Other similar prep work (for example LinkedIn) can sit on the same standard list
 
 ## Feature list
 
-| ID  | Feature                        | Summary                                                                                                   |
-| --- | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| F1  | Student account and profile    | Students sign in and keep academic/career profile data used to tailor the plan.                           |
-| F2  | Semester flight-plan checklist | Each semester shows the college-standard tasks and events, plus any extras the advisor pushed.            |
-| F3  | Career-prep tasks              | Standard tasks such as resume and Indeed/Handshake accounts; students mark them complete.                 |
-| F4  | Career events                  | Standard events such as career fairs; students mark attendance.                                           |
-| F5  | Progress tracking              | Students check items off and see how ready they are to apply for jobs.                                    |
-| F6  | Multi-semester plan            | Students see a full-school checklist organized by semester from first year through graduation.            |
-| F7  | Reminders and deadlines        | Students get reminders so they complete items before the semester ends.                                   |
-| F8  | Job-application readiness      | Students see remaining gaps before they apply (resume, internships, skills, documents).                   |
-| F9  | Resources and guidance         | Each checklist item can include how-to resources, templates, and office hours.                            |
-| F10 | Advisor roster and progress    | Faculty advisors see their advisees (assigned at enrollment) and open each student’s progress.            |
-| F11 | Advisor-assigned tasks         | Faculty advisors push tasks onto a student or group of their advisees.                                    |
+
+| ID  | Feature                        | Summary                                                                                        |
+| --- | ------------------------------ | ---------------------------------------------------------------------------------------------- |
+| F1  | Student account and profile    | Students sign in and keep academic/career profile data used to tailor the plan.                |
+| F2  | Semester flight-plan checklist | Each semester shows the college-standard tasks and events, plus any extras the advisor pushed. |
+| F3  | Career-prep tasks              | Standard tasks such as resume and Indeed/Handshake accounts; students mark them complete.      |
+| F4  | Career events                  | Standard events such as career fairs; students mark attendance.                                |
+| F5  | Progress tracking              | Students check items off and see how ready they are to apply for jobs.                         |
+| F6  | Multi-semester plan            | Students see a full-school checklist organized by semester from first year through graduation. |
+| F7  | Reminders and deadlines        | Students get reminders so they complete items before the semester ends.                        |
+| F8  | Job-application readiness      | Students see remaining gaps before they apply (resume, internships, skills, documents).        |
+| F9  | Resources and guidance         | Each checklist item can include how-to resources, templates, and office hours.                 |
+| F10 | Advisor roster and progress    | Faculty advisors see their advisees (assigned at enrollment) and open each student’s progress. |
+| F11 | Advisor-assigned tasks         | Faculty advisors push tasks onto a student or group of their advisees.                         |
+
 
 ---
 
